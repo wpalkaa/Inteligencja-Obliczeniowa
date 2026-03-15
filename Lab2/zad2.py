@@ -28,7 +28,7 @@ if n == 2:
     X_reduced = PCA(n_components=n).fit_transform(iris.data)
 
     plt.figure(figsize=(8,6))
-    scatter = plt.scatter(X_reduced[:,0], X_reduced[:,1], c=y, cmap='viridis')
+    scatter = plt.scatter(X_reduced[:,0], X_reduced[:,1], c=y)
     plt.xlabel('PC1')
     plt.ylabel('PC2')
     plt.title('PCA Iris gdzie n = 2')

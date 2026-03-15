@@ -5,8 +5,6 @@ import numpy as np
 
 pd.set_option('display.max_rows', None)  # Pokaż wszystkie wiersze
 pd.set_option('display.max_columns', None)  # Pokaż wszystkie kolumny
-pd.set_option('display.width', 1000)  # Szerokość terminala
-pd.set_option('display.max_colwidth', None)  # Pełna szerokość kolumn tekstowych
 
 fileName = 'iris_big_with_errors.csv'
 

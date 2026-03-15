@@ -17,12 +17,10 @@ print("\nstd. deviation: \n", data.std())
 
 
 minmax = MinMaxScaler()
-dataMinMax = pd.DataFrame(minmax.fit_transform(data),
-                           columns=data.columns)
+dataMinMax = pd.DataFrame(minmax.fit_transform(data), columns=data.columns)
 
 zCore = StandardScaler()
-dataZCore = pd.DataFrame(zCore.fit_transform(data),
-                           columns=data.columns)
+dataZCore = pd.DataFrame(zCore.fit_transform(data), columns=data.columns)
 
 
 fig, axes = plt.subplots(1, 3, figsize=(18,5))
@@ -43,3 +41,4 @@ for ax in axes:
     i += 1
 
 plt.show()
+print(zCore)
