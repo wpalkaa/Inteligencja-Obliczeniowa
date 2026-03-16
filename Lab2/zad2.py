@@ -15,9 +15,14 @@ print(X.head())
 # bo 0.924 + 0.053 > 0.95
 pca_iris = PCA(n_components=2).fit(iris.data) 
 print("pca_iris: ", pca_iris) 
-print("variance_ratio: ", pca_iris.explained_variance_ratio_) 
+
+# [0.92461872 0.05306648 0.01710261 0.00521218]
+# wypisuje współczynniki wariancji - kolumna zachowałą x informacji
+print("variance_ratio: ", pca_iris.explained_variance_ratio_)
+
+# n wektórów, każdy z nich ma wagi mówiące ile dana kolumna ma wpływu na wynik
 print("pca components: ", pca_iris.components_) 
-print(pca_iris.transform(iris.data))
+print("pca_iris transform: ", pca_iris.transform(iris.data))
 
 
 # Wykres

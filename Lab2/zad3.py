@@ -16,9 +16,15 @@ print('\nmean: \n', data.mean())
 print("\nstd. deviation: \n", data.std())
 
 
+# skaluje dane tak, żeby wszystkie były w przedziale <0,1>
+# wartość min staje się 0, max 1
 minmax = MinMaxScaler()
 dataMinMax = pd.DataFrame(minmax.fit_transform(data), columns=data.columns)
 
+# śrędnią z danych ustawia jako punkt 0
+# Dla każdej wartości wylicza stosunek wybranej danej do średniej
+# w skali odchylenia std. 
+# x - średnia / odchylenie std.
 zCore = StandardScaler()
 dataZCore = pd.DataFrame(zCore.fit_transform(data), columns=data.columns)
 
