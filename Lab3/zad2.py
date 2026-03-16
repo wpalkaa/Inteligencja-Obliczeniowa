@@ -4,8 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn import tree
 from sklearn.metrics import confusion_matrix
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier, export_text, plot_tree
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from sklearn.metrics import confusion_matrix
 
 df = pd.read_csv("iris_big 1.csv")
 (train_set, test_set) = train_test_split(df.values, train_size=0.7, random_state=13)

@@ -4,7 +4,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix
+from sklearn.metrics import confusion_matrix
 
 
 df = pd.read_csv("iris_big 1.csv")
@@ -30,11 +30,12 @@ mlp = MLPClassifier(max_iter=5000, random_state=13)
 
 
 classifiers = {
-    'NN3': nbrs3,
-    "NN5": nbrs5,
-    "NN11": nbrs11,
-    "Naive Bayes": naiveBayes,
-    "MLP": mlp 
+    "DT": DecisionTreeClassifier(),
+    "3NN": KNeighborsClassifier(n_neighbors=3),
+    "5NN": KNeighborsClassifier(n_neighbors=5),
+    "11NN": KNeighborsClassifier(n_neighbors=11),
+    "Naive Bayes": GaussianNB(),
+    "MLP": MLPClassifier(max_iter=2000)
 }
 
 accuracyDic = {}
@@ -48,8 +49,8 @@ for name, clf in classifiers.items():
     labels = ["setosa", "versicolor", "virginica"]
     cm_df = pd.DataFrame(confMatrix, index=labels, columns=labels)
     
+    # Bierze train_inputs, generuje predictions i porównuje z train_classes
     accuracy = clf.score(train_inputs, train_classes)
-    
     accuracyDic[name] = accuracy
     
     print(f"============ {name} ============")
