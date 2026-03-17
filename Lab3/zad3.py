@@ -41,6 +41,8 @@ classifiers = {
 accuracyDic = {}
 
 for name, clf in classifiers.items():
+    # Na podstawie daynch buduje mechanizm identyfikacji 
+    # dla danego klasyfikatora - wylicza wagi czy zależności
     clf.fit(train_inputs, train_classes)
     
     predictions = clf.predict(train_inputs)
