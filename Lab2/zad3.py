@@ -25,13 +25,13 @@ dataMinMax = pd.DataFrame(minmax.fit_transform(data), columns=data.columns)
 # Dla każdej wartości wylicza stosunek wybranej danej do średniej
 # w skali odchylenia std. 
 # x - średnia / odchylenie std.
-zCore = StandardScaler()
-dataZCore = pd.DataFrame(zCore.fit_transform(data), columns=data.columns)
+zScore = StandardScaler()
+dataZScore = pd.DataFrame(zScore.fit_transform(data), columns=data.columns)
 
 
 fig, axes = plt.subplots(1, 3, figsize=(18,5))
 titles = ['Original Dataset', 'Z-Core Scaled Dataset', 'Min-Max Normalised Dataset']
-datas = [ data, dataMinMax, dataZCore]
+datas = [ data, dataMinMax, dataZScore]
 
 i = 0
 for ax in axes:
@@ -47,4 +47,4 @@ for ax in axes:
     i += 1
 
 plt.show()
-print(zCore)
+print(zScore)
