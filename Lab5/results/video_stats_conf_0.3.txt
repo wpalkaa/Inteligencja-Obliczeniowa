@@ -1,0 +1,6 @@
+Statystyki wykryć klas w całym filmie:
+- traffic light: 682
+- car: 365
+- person: 166
+- toilet: 72
+- truck: 16
