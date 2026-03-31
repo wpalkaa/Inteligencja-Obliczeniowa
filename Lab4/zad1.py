@@ -1,7 +1,5 @@
 import math
 
-# SPYTAJ CZYM JEST BIAS
-
 def sigmoid(x):
     return 1 / ( 1 + math.exp(-x))
 
@@ -94,7 +92,7 @@ def back_propagation():
     w6 = w6 - eta * dw6 # -0.3785
     b3 = b3 - eta * db3
 
-print(forward_propagation(x1, x2))
+print(forward_propagation(x1, x2)) # zwraca h1, h2, y
 back_propagation()
 print(forward_propagation(x1, x2))
 print(w1, w2, w3, w4, w5, w6)

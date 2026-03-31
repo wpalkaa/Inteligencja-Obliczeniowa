@@ -6,7 +6,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.preprocessing import LabelEncoder, StandardScaler  
 import matplotlib.pyplot as plt
-import seaborn as sbs
 
 
 df = pd.read_csv("iris_big.csv")
@@ -157,7 +156,7 @@ for t in range(epochs):
     test_accs.append(test_acc)
     
     if (t+1) % 10 == 0:
-            print(f"Epoch {t+1}/{epochs} | Train Loss: {train_loss:.4f}, Acc: {train_acc:.4f} | Val Loss: {test_loss:.4f}, Acc: {test_acc:.4f}")
+            print(f"Epoch {t+1}/{epochs} | Train => Loss: {train_loss:.4f}, Acc: {train_acc:.4f} | Test => Loss: {test_loss:.4f}, Acc: {test_acc:.4f}")
     
 
 print("Done!")
@@ -180,6 +179,7 @@ ax2.set(xlabel="epoki", ylabel="Dokładność", title="Wykres Acc")
 ax2.legend()
 ax2.grid(True)
 
+plt.savefig("zad2.png")
 plt.show()
 
 
