@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 6e7cd6a34ca6eceb1bc4de74b2e06f0633477c56 wpalkaa <poukoxy@gmail.com> 1776442297 +0200	clone: from https://gitlab.com/wpalkaa/ml-project-template
+6e7cd6a34ca6eceb1bc4de74b2e06f0633477c56 5ce88017ec565c9225aea94da99383041975dc99 wpalkaa <poukoxy@gmail.com> 1776539519 +0200	commit: feat: zad-g compare
+5ce88017ec565c9225aea94da99383041975dc99 c8d30bfd8d5785911fb738a132da34243fa901b6 wpalkaa <poukoxy@gmail.com> 1776540562 +0200	commit: feat: zad h - robust
+c8d30bfd8d5785911fb738a132da34243fa901b6 45d6b6a89d2f8f2c96aa6771b8b7f964b018d362 wpalkaa <poukoxy@gmail.com> 1776542496 +0200	commit: feat: zad j - new experiment (batchnorm)
+45d6b6a89d2f8f2c96aa6771b8b7f964b018d362 45e4915ecc9bd0d47f60d90ca7d2a3ad63107428 wpalkaa <poukoxy@gmail.com> 1776543258 +0200	commit: feat: zad k - new test
+45e4915ecc9bd0d47f60d90ca7d2a3ad63107428 4aa0a65fe33445a0694b3db988286f4a8fcd48c6 wpalkaa <poukoxy@gmail.com> 1776544402 +0200	commit: feat: zad j - f-score
+4aa0a65fe33445a0694b3db988286f4a8fcd48c6 da7f129aa5e0d35f64b369aa376c54f4d0433341 wpalkaa <poukoxy@gmail.com> 1776545231 +0200	commit: feat: zad l - new cli (list experiments)
+da7f129aa5e0d35f64b369aa376c54f4d0433341 78af0af43e8503f73a3bbf2855f08fb13dfd895b wpalkaa <poukoxy@gmail.com> 1776547664 +0200	commit: feat: zad m - diagnosis.csv

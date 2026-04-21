@@ -1,0 +1,83 @@
+in: configs/, data/raw/
+out: data/processed/ (dane po preprocessingu), models/ (waagi), reports/ (różne wykresy, wyniki ewaluacji)
+
+Logika główna: src/cli/ (główne programy), src/experiments/ (warianty modeli).
+
+tests/ - testy
+
+b)
+
+make setup - przygotowanie środowiska i pobranie paczek
+
+make pipeline - fetchuje dane, odpala eksperymenty, wizualizuje je i porównuje
+
+make test - włącza testy pytest
+
+make pyright - analizator typowania, sprawdza, czy dane przekazywane między funkcjami zgadzają się z deklarowanymi typami
+
+make ruff - wykrywa problemy stylistyczne i niespójności, dba o to by kod był czysty
+
+c)
+różnią się nazwami oraz plikami wyjśiowymi a także strategią
+W eksperymentach mlp jest podane training.hidden_dims: [16, 16]. Mają też mniejszy learning_rate z 0.05 => 0.01
+
+model.name - zmiana modelu
+preprocessing.strategy - zmienia strategię preprocessingu, wybiera sposób przygotowania danych
+paths.* - zmienia miejsca docelowe output
+
+d)
+czyta config => czyta dane => preprocessing => train => evaluate => visualize_training
+
+e)
+wspólne - nic nie w nich nie zmienia, jeżeli już do path outputu:
+load_checkpoint
+run
+predict_one
+visualize_training
+evaluate
+train
+preprocess
+
+nie - funkcje muszą se same zdefiniować:
+build_model
+name
+
+
+f)
+np.
+pydantic_core._pydantic_core.ValidationError: 5 validation errors for ProjectConfig
+paths.predictions_csv
+  Field required [type=missing, input_value={'raw_csv': WindowsPath('...score/evaluation.json')}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+paths.confusion_matrix_png
+  Field required [type=missing, input_value={'raw_csv': WindowsPath('...score/evaluation.json')}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+paths.pairplot_png
+  Field required [type=missing, input_value={'raw_csv': WindowsPath('...score/evaluation.json')}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+paths.feature_hist_png
+  Field required [type=missing, input_value={'raw_csv': WindowsPath('...score/evaluation.json')}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+paths.training_curves_png
+  Field required [type=missing, input_value={'raw_csv': WindowsPath('...score/evaluation.json')}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+
+mamy podane wymagane opcje powiedziane co to dokładnie ma być - string/ścieżka czy może int
+
+
+m)
+trzeba zmienić:
+target_column => diagnosis
+feature_columns => param1-3
+class_names => 0/1
+
+paths
+
+project name i exp name
+
+w src/data/dataset.py   na zgadzające się informacje z diagnosis
+
+zmienić 0-1 na zdrowy-chory by nie szukać wymagania stringow i zmieniac tego na inty
+
+make fetch
+
