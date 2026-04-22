@@ -27,6 +27,10 @@ paths.* - zmienia miejsca docelowe output
 
 d)
 czyta config => czyta dane => preprocessing => train => evaluate => visualize_training
+        self.preprocess(frame)
+        self.train()
+        self.evaluate()
+        self.visualize_training()
 
 e)
 wspólne - nic nie w nich nie zmienia, jeżeli już do path outputu:
@@ -38,7 +42,7 @@ evaluate
 train
 preprocess
 
-nie - funkcje muszą se same zdefiniować:
+nie - funkcje muszą se same zdefiniować w src/experiments/*:
 build_model
 name
 
@@ -65,7 +69,35 @@ paths.training_curves_png
 mamy podane wymagane opcje powiedziane co to dokładnie ma być - string/ścieżka czy może int
 
 
+g)
+iris_mlp_zscore_copy
+
+iris_mlp_zscore,mlp_classifier,zscore,0.9666666666666667,0.9666666666666667
+iris_mlp_zscore_po_zmianach,mlp_classifier,zscore,0.6666666666666666,0.6666666666666666
+
+
+h)
+https://gitlab.com/wpalkaa/ml-project-template/-/commit/c8d30bfd8d5785911fb738a132da34243fa901b6
+
+i)
+batchnorm
+https://gitlab.com/wpalkaa/ml-project-template/-/commit/45d6b6a89d2f8f2c96aa6771b8b7f964b018d362
+
+j)
+f-score
+https://gitlab.com/wpalkaa/ml-project-template/-/commit/4aa0a65fe33445a0694b3db988286f4a8fcd48c6
+
+
+k)
+https://gitlab.com/wpalkaa/ml-project-template/-/commit/45e4915ecc9bd0d47f60d90ca7d2a3ad63107428
+
+l)
+https://gitlab.com/wpalkaa/ml-project-template/-/commit/da7f129aa5e0d35f64b369aa376c54f4d0433341
+
+
 m)
+https://gitlab.com/wpalkaa/ml-project-template/-/commit/78af0af43e8503f73a3bbf2855f08fb13dfd895b
+
 trzeba zmienić:
 target_column => diagnosis
 feature_columns => param1-3
