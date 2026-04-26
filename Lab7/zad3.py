@@ -67,7 +67,7 @@ sol_per_pop = 100 # chromosomów w populacji
 num_genes = max_steps # genów w chromosomie
 
 num_parents_mating = 45 # ile rodziców do rozmnażania (około 50% populacji)
-num_generations = 1500 # ile pokolen
+num_generations = 300 # ile pokolen
 keep_parents = 7 # ilu rodziców zachować (kilka procent)
 
 #jaki typ selekcji rodzicow?
@@ -80,29 +80,47 @@ crossover_type = "single_point"
 #mutacja ma dzialac na ilu procent genow?
 #trzeba pamietac ile genow ma chromosom
 mutation_type = "random"
-mutation_percent_genes = 7 #trzeba dać więcej bo inaczej jest warning
+mutation_percent_genes = 4 #trzeba dać więcej bo inaczej jest warning
 
-ga_instance = pygad.GA(gene_space=gene_space,
-                    num_generations=num_generations,
-                    num_parents_mating=num_parents_mating,
-                    fitness_func=fitness_function,
-                    sol_per_pop=sol_per_pop,
-                    num_genes=num_genes,
-                    parent_selection_type=parent_selection_type,
-                    keep_parents=keep_parents,
-                    crossover_type=crossover_type,
-                    mutation_type=mutation_type,
-                    mutation_percent_genes=mutation_percent_genes)
 
-ga_instance.run()
 
-solution, solution_fitness, solution_idx = ga_instance.best_solution()
+success = 0
+times = []
+
+for i in range(10):
+        
+    ga_instance = pygad.GA(gene_space=gene_space,
+                        num_generations=num_generations,
+                        num_parents_mating=num_parents_mating,
+                        fitness_func=fitness_function,
+                        sol_per_pop=sol_per_pop,
+                        num_genes=num_genes,
+                        parent_selection_type=parent_selection_type,
+                        keep_parents=keep_parents,
+                        crossover_type=crossover_type,
+                        mutation_type=mutation_type,
+                        mutation_percent_genes=mutation_percent_genes,
+                        stop_criteria=f"reach_100")
+    start = time.time()
+    ga_instance.run()
+    end = time.time()
+
+    solution, solution_fitness, solution_idx = ga_instance.best_solution()
+
+    if solution_fitness > 100:
+        success += 1
+    times.append(round(end-start,6))
 
 #podsumowanie: najlepsze znalezione rozwiazanie (chromosom+ocena)
 print("Parameters of the best solution : {solution}".format(solution=solution))
 print("Fitness value of the best solution = {solution_fitness}".format(solution_fitness=solution_fitness))
 
 print([moves_map[m] for m in solution])
+
+print(f"Sukcesy: {success}")
+print(f"Czasy: {times}")
+print(f"Średni czas: {np.mean(times)}")
+
 
 #wyswietlenie wykresu: jak zmieniala sie ocena na przestrzeni pokolen
 ga_instance.plot_fitness()
