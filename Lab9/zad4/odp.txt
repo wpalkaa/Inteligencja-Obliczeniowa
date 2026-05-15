@@ -1,0 +1,8 @@
+python lstm03_pt.py
+Loading: weights-improvement-15-2.2862.pt
+Seed:
+" n in the sky, was just dropping behind kettleness; the red light was
+thrown over on the east cliff a "
+
+nd the soeee of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the 
+Done.
