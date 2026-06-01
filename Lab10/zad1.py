@@ -1,5 +1,10 @@
 import gymnasium as gym
 
+# Stan gry i zestaw akcji są dyskretne (tzn. jest to skończony zestaw). 
+# Stan gry jest ciągły (nieskończony, liczby zmiennoprzecinkowe), ale zestaw akcji jest dyskretny. 
+# Stan gry i zestaw akcji jest ciągły
+
+
 # Przykłady z różnych kategorii:
 # env = gym.make("FrozenLake-v1", render_mode="human")          # ToyText - stan dyskretny akcja dyskretna, plansza to skończona siatka pól, akcje to góra/dół/lewo/prawo
 # env = gym.make("CartPole-v1", render_mode="human")            # Classic Control - stan ciągły akcja dyskretna, kąt i prędkość to liczby zmiennoprzecinkowe, ale akcje to tylko 0 - lewo, 1 - prawo

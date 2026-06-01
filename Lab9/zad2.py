@@ -5,6 +5,7 @@ import text2emotion as te
 from transformers import pipeline
 
 nltk.download('vader_lexicon')
+nltk.download('punkt_tab')
 
 # a)
 
@@ -42,3 +43,23 @@ classifier = pipeline("sentiment-analysis", model="j-hartmann/emotion-english-di
 for k, review in reviews.items():
     result = classifier(review)
     print(f"{k}: {result}")
+
+
+
+"""
+vader
+Positive: {'neg': 0.0, 'neu': 0.476, 'pos': 0.524, 'compound': 0.9627}
+Negative: {'neg': 0.158, 'neu': 0.798, 'pos': 0.044, 'compound': -0.9802}
+
+textblob:
+Positive: 0.5160
+Negative: 0.1003
+
+text2emotion
+Positive: {'Happy': 0.5, 'Angry': 0.0, 'Surprise': 0.0, 'Sad': 0.0, 'Fear': 0.5}
+Negative: {'Happy': 0.19, 'Angry': 0.15, 'Surprise': 0.04, 'Sad': 0.33, 'Fear': 0.3}
+
+huggingface
+Positive: [{'label': 'joy', 'score': 0.9692143201828003}]
+Negative: [{'label': 'sadness', 'score': 0.9417577385902405}]
+"""

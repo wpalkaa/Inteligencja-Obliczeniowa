@@ -36,7 +36,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model  = CharLSTM(n_vocab).to(device)
 
 # pick the checkpoint with the lowest loss (last field before .pt)
-checkpoints = glob.glob("weights-improvement-*.pt")
+checkpoints = glob.glob("weights-improvement-01-2.8831.pt")
 if not checkpoints:
     sys.exit("No checkpoint found. Train with lstm02_pt.py first.")
 checkpoint = min(checkpoints, key=lambda f: float(f.rsplit('-', 1)[-1][:-3]))

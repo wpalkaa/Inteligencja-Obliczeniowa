@@ -38,7 +38,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model  = TokenLSTM(n_token_vocab).to(device)
 
 # pick the checkpoint with the lowest loss
-checkpoints = glob.glob("big-token-model-*.pt")
+checkpoints = glob.glob("big-token-model-15-5.1859.pt")
 if not checkpoints:
     sys.exit("No checkpoint found. Train with lstm04_pt.py first.")
 checkpoint = min(checkpoints, key=lambda f: float(f.rsplit('-', 1)[-1][:-3]))

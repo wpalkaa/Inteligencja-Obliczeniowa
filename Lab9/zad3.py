@@ -5,7 +5,7 @@ subreddit = "witcher"
 limit = 100
 url = f"https://www.reddit.com/r/{subreddit}/new.json?limit={limit}"
 
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) UnivGdanskNLP/1.0'}
+headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Safari/1.0'}
 
 print(f"Pobieranie {limit} postów z r/{subreddit}...")
 response = requests.get(url, headers=headers)

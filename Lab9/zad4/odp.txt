@@ -6,3 +6,76 @@ thrown over on the east cliff a "
 
 nd the soeee of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the sooe of the 
 Done.
+
+
+Loading: weights-improvement-05-2.5817.pt
+Seed:
+"  and when i shook my head his hands trembled,
+and then with some hesitation he asked me if i cared a "
+
+n the tooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote to the wooe  an the woot wo tee tooe to the woote t
+Done.
+
+
+
+
+python .\lstm03_pt.py
+Loading: weights-improvement-01-2.8831.pt
+Seed:
+" chlight, after scouring
+the entrance of the harbour without seeing anything, then turned the
+light o "
+
+e the tee tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe tee toe te
+Done.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ python .\lstm05_pt.py
+Total Tokens: 56196  |  Unique Tokens (Vocab): 5499
+Loading: big-token-model-01-6.3581.pt
+Seed:
+" to the window , and throwing it up , peered out between the bars . there , indeed , was a woman with dishevelled hair , holding her hands over her heart as one distressed with running . she was leaning against a corner of the gateway . when she saw my face at the window she threw herself forward , and shouted in a voice laden with menace :-- “ monster , give me my child !” she threw herself on her knees , and raising up her hands , cried the same words in tones which wrung my "
+
+Generated text:
+, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , 
+Done.
+
+
+
+
+python .\lstm05_pt.py
+Total Tokens: 56196  |  Unique Tokens (Vocab): 5499
+Loading: big-token-model-05-6.0280.pt
+Seed:
+" who would worship the very ground he trod on ? i know i would if i were free -- only i don ’ t want to be free . my dear , this quite upset me , and i feel i cannot write of happiness just at once , after telling you of it ; and i don ’ t wish to tell of the number three until it can be all happy . “ ever your loving “ lucy . “ p . s .-- oh , about number three -- i needn ’ t tell you of number "
+
+Generated text:
+, and i , i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and 
+Done.
+
+
+python .\lstm05_pt.py
+Total Tokens: 56196  |  Unique Tokens (Vocab): 5499
+Loading: big-token-model-05-6.0280.pt
+Seed:
+" who would worship the very ground he trod on ? i know i would if i were free -- only i don ’ t want to be free . my dear , this quite upset me , and i feel i cannot write of happiness just at once , after telling you of it ; and i don ’ t wish to tell of the number three until it can be all happy . “ ever your loving “ lucy . “ p . s .-- oh , about number three -- i needn ’ t tell you of number "
+
+Generated text:
+, and i , i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and i , and 
+Done.
